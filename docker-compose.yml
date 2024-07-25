@@ -10,7 +10,7 @@ services:
       - "8080:8080"
     environment:
       - NODE_ENV=development
-      - DATABASE_URL=mysql://myuser:MyStr0ngP@ssw0rd!@34.135.80.200:3306/ztestdb
+      - DATABASE_URL=mysql://myuser:MyStr0ngP@ssw0rd!@mysql:3306/ztestdb
     volumes:
       - .:/usr/src/app
 
@@ -22,7 +22,7 @@ services:
       MYSQL_USER: myuser
       MYSQL_PASSWORD: MyStr0ngP@ssw0rd!
     ports:
-      - "3306:3306"
+      - "3307:3306"  # Map host port 3307 to container port 3306
     volumes:
       - mysql-data:/var/lib/mysql
 
