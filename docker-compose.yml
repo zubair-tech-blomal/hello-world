@@ -6,3 +6,8 @@ services:
     ports:
       - "8080:8080"
     container_name: hello-world-api
+    environment:
+      - NODE_ENV=production
+      - DATABASE_URL=mysql://myuser:MyStr0ngP@ssw0rd!@34.135.80.200:3306/ztestdb
+    volumes:
+      - .:/usr/src/app
